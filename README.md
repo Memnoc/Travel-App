@@ -1,4 +1,4 @@
-# Webpack Express Example App
+# Travel App
 
 The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
 
