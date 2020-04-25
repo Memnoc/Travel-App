@@ -4,6 +4,7 @@ const mockAPIResponse = require('./mockAPI.js')
 
 const app = express()
 
+// update to reflect the dynamic creation of assets file in dist
 app.use(express.static('dist'))
 
 console.log(__dirname)
