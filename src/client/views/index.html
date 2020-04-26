@@ -18,17 +18,36 @@
     </header>
 
     <main>
-        <section>
-            <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-            </form>
-            <section>
+        <section class="card-section">
+            <div class="card shadow-lg p-3 mb-5 bg-dark rounded">
+                <div class="card-body">
+                    <form onsubmit="return Client.sentimentApi(event)">
+                        <div class="">
+                            <h5 class="card-title">
+                                Extract article sentiment date
+                            </h5>
+                            <input class="card-text" id="submitText" type="text" name="input" value="" placeholder="Paste some text" required>
+                            <button class="btn btn-primary" id="submitSentimentButton" type="submit" onclick="this.blur();">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <h2 class="page-title">Analisys results</h2>
+            <!-- List results -->
+            <div class="list-group ">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-center">
+                        <h5 class="mb-1 card-title">Sentiment resulst analysis</h5>
+                    </div>
+                    <div class="sentiment-results d-flex w-100 justify-content-center">
+                        <div class="d-flex justify-content-between results-text" id="polarity"></div>
+                        <br>
+                        <div class="d-flex justify-content-between results-text" id="polarity_confidence"></div>
+                    </div>
+                </a>
+        </section>
 
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
-                </section>
     </main>
 
     <footer>
