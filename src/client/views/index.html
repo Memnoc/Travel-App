@@ -21,13 +21,13 @@
         <section class="card-section">
             <div class="card shadow-lg p-3 mb-5 bg-dark rounded">
                 <div class="card-body">
-                    <form onsubmit="return Client.sentimentApi(event)">
+                    <form>
                         <div class="">
                             <h5 class="card-title">
-                                Extract article sentiment date
+                                Extract geoname data
                             </h5>
-                            <input class="card-text" id="submitText" type="text" name="input" value="" placeholder="Paste some text" required>
-                            <button class="btn btn-primary" id="submitSentimentButton" type="submit" onclick="this.blur();">Submit</button>
+                            <input class="card-text" id="submitCity" type="text" name="input" value="" placeholder="Paste the city name" required>
+                            <button class="btn btn-primary" id="submitCityButton" type="submit" onclick="this.blur();">Submit</button>
                         </div>
                     </form>
                 </div>
