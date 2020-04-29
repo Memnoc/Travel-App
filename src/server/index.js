@@ -24,7 +24,7 @@ function getData(request, response) {
 }
 
 
-// POST route
+// Geonames POST route
 app.post('/addWeather', addWeather);
 
 // Callback to the route to receive the client data and store it into an object entry
@@ -35,6 +35,8 @@ function addWeather(request, response) {
     projectData.countryName = request.body.country;
     projectData.latitude = request.body.latitude;
     projectData.longitude = request.body.longitude;
+    projectData.date = request.body.date;
+    projectData.city = request.body.city;
 
     response.send(projectData)
     console.log(projectData)
