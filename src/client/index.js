@@ -1,5 +1,5 @@
 import { checkForName } from './js/nameChecker'
-import { performAction } from './js/formHandler'
+import { geonamesApiCall } from './js/geoName'
 
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -12,7 +12,7 @@ let submitButton = document.getElementById('submitCityButton');
 submitButton.addEventListener('click', async(event) => {
     try {
         event.preventDefault();
-        performAction();
+        geonamesApiCall();
     } catch (error) {
         console.log("error", error);
     }
@@ -22,5 +22,5 @@ submitButton.addEventListener('click', async(event) => {
 
 export {
     checkForName,
-    performAction
+    geonamesApiCall
 }
