@@ -15,8 +15,11 @@
     "dependencies": {
         "aylien_textapi": "^0.7.0",
         "cors": "^2.8.5",
+        "cors-anywhere": "^0.4.1",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
+        "node-fetch": "^2.6.0",
+        "request": "^2.88.2",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.11"
     },

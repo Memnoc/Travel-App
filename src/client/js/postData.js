@@ -9,7 +9,7 @@ export const postData = async(url = '', data = {}) => {
     });
     try {
         const newData = await response.json();
-        console.log('this is newData', newData);
+        // console.log('this is newData', newData);
         return newData;
     } catch (error) {
         console.log("error", error);

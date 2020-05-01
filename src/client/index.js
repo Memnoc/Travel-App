@@ -1,5 +1,6 @@
 import { checkForName } from './js/nameChecker'
 import { geonamesApiCall } from './js/geoName'
+import { weatherBitApiCall } from './js/weatherBit'
 
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -13,6 +14,7 @@ submitButton.addEventListener('click', async(event) => {
     try {
         event.preventDefault();
         geonamesApiCall();
+        weatherBitApiCall();
     } catch (error) {
         console.log("error", error);
     }
@@ -22,5 +24,6 @@ submitButton.addEventListener('click', async(event) => {
 
 export {
     checkForName,
-    geonamesApiCall
+    geonamesApiCall,
+    weatherBitApiCall
 }

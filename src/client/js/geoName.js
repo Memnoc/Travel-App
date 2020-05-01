@@ -7,7 +7,7 @@ let baseURL = 'http://api.geonames.org/searchJSON?';
 let countryName = document.getElementById('countryName');
 let departureDate = document.getElementById('depDate');
 let countdownDate = document.getElementById('countdown');
-const fetchURL = "http://localhost:8081/all";
+const fetchURL = "http://localhost:8081/geonames";
 
 
 function geonamesApiCall(e) {
@@ -18,7 +18,7 @@ function geonamesApiCall(e) {
     getWeather(baseURL, searchMethod, newSearch, APP_ID)
         .then(function(data) {
             try {
-                postData('http://localhost:8081/addWeather', { country: data.geonames[0].countryName, latitude: data.geonames[0].lat, longitude: data.geonames[0].lng, date: countdownDate, city: city })
+                postData('http://localhost:8081/addGeonamesWeather', { country: data.geonames[0].countryName, latitude: data.geonames[0].lat, longitude: data.geonames[0].lng, date: countdownDate, city: city })
                 updateUI();
             } catch (error) {
                 console.log("error", error);
@@ -29,7 +29,7 @@ function geonamesApiCall(e) {
 
 
 function calculateTime() {
-    let departure = departureDate.innerText;
+    let departure = departureDate.value;
     let countDownDate = Date.parse(departure);
 
     let intervalTime = setInterval(function() {
@@ -61,7 +61,7 @@ const updateUI = async() => {
     const request = await fetch(fetchURL);
     try {
         const allData = await request.json();
-        console.log("this is allData", allData);
+        console.log("this is data from geoNames", allData);
         const capitalCity = allData.city;
         const capitaliseCity = capitalCity.charAt(0).toUpperCase() + capitalCity.slice(1);
         countryName.innerHTML = "My trip to " + capitaliseCity + ", " + allData.countryName;
