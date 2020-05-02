@@ -1,14 +1,16 @@
 import { postData } from "./postData";
+import { restCountriesApiCall } from "./restCountries"
 
 const APP_ID = '&username=Memnoc';
 let searchMethod = 'name_equals=';
 let searchTerm;
 let baseURL = 'http://api.geonames.org/searchJSON?';
 let countryName = document.getElementById('countryName');
+let countryValue = document.getElementById('countryValue');
 let departureDate = document.getElementById('depDate');
 let countdownDate = document.getElementById('countdown');
 const fetchURL = "http://localhost:8081/geonames";
-
+let url = '';
 
 function geonamesApiCall(e) {
     const newSearch = document.getElementById('submitCity').value;
@@ -69,7 +71,9 @@ const updateUI = async() => {
         console.log("this is data from geoNames", allData);
         const capitalCity = allData.city;
         const capitaliseCity = capitalCity.charAt(0).toUpperCase() + capitalCity.slice(1);
-        countryName.innerHTML = "My trip to " + capitaliseCity + ", " + allData.countryName;
+        countryName.innerHTML = "My trip to " + capitaliseCity;
+        countryValue.innerHTML = allData.countryName;
+
 
 
     } catch (error) {

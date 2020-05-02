@@ -29,6 +29,7 @@
                             <p>Destination:</p>
                             <input class="card-text" id="submitCity" type="text" name="input" value="" placeholder="Paste the city name" required>
                             <h4 id="countryName" class="card-title">
+                                <h5 id="countryValue">
 
                             </h4>
                             <div>
@@ -38,6 +39,7 @@
                             <br>
                             <!-- <p id="countdown"></p> -->
                             <button class="btn btn-primary" id="submitCityButton" type="submit" onclick="this.blur();">Submit</button>
+                            <button class="btn btn-primary" id="requestCountryInfo" type="submit" onclick="Client.restCountriesApiCall(event)">info</button>
                         </div>
                     </form>
                 </div>
