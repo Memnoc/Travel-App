@@ -24,31 +24,34 @@
                     <form>
                         <div class="">
                             <h1>Travel Planner</h1>
-                            <p>Departing: </p>
+                            <p>Departure date:</p>
                             <input id="depDate" placeholder="dd/mm/yyyy" type="date">
-                            <h5 id="countryName" class="card-title">
-                            </h5>
+                            <p>Destination:</p>
                             <input class="card-text" id="submitCity" type="text" name="input" value="" placeholder="Paste the city name" required>
-                            <p id="countdown"></p>
+                            <h4 id="countryName" class="card-title">
+
+                            </h4>
+                            <div>
+                                <span id="countdown"></span>
+                            </div>
+
+                            <br>
+                            <!-- <p id="countdown"></p> -->
                             <button class="btn btn-primary" id="submitCityButton" type="submit" onclick="this.blur();">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
             <br>
-            <h2 class="page-title">Analisys results</h2>
+            <h3 class="page-title">Weather forecast for departure date: </h3>
             <!-- List results -->
             <div class="list-group ">
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-center">
-                        <h5 class="mb-1 card-title">Sentiment resulst analysis</h5>
-                    </div>
-                    <div class="sentiment-results d-flex w-100 justify-content-center">
-                        <div class="d-flex justify-content-between results-text" id="polarity"></div>
-                        <br>
-                        <div class="d-flex justify-content-between results-text" id="polarity_confidence"></div>
-                    </div>
-                </a>
+                <div class="d-flex w-100 justify-content-center">
+                    <p id="today"></p>
+                    <p id="wind"></p>
+                    <p id="clouds"></p>
+                    <p id="uv"></p>
+                </div>
         </section>
 
     </main>

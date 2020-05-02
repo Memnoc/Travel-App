@@ -1,6 +1,7 @@
 /* Empty JS object to act as endpoint for all routes */
+
+const weatherbitProjectData = {};
 const geonamesProjectData = {};
-const weaProjectData = {};
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -19,18 +20,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+//************************************************** Geonames routes **************************************************/ 
+
 // GET geonames api route
 app.get('/geonames', sendGeonamesData)
-
-// Callback to the geonames api route
+    // Callback to the geonames api route
 function sendGeonamesData(request, response) {
     response.send(geonamesProjectData)
 }
 
-
-// Geonames POST route
+// POST geonames api route
 app.post('/addGeonamesWeather', addWeather);
-
 // Geonames callback
 function addWeather(request, response) {
     let responseData = request.body;
@@ -45,31 +45,33 @@ function addWeather(request, response) {
     console.log('geonames response', geonamesProjectData)
 }
 
+//************************************************** Geonames routes **************************************************/ 
 
+//************************************************** Weatherbit routes **************************************************/ 
 
-// Weatherbit get route
+// Weatherbit GET route
 app.get('/weatherbit', cors(), sendWeatherBitData);
-
 // Callback to the weatherbit api route
 function sendWeatherBitData(request, response) {
-    response.send(weaProjectData)
+    response.send(weatherbitProjectData)
 }
 
 // Weatherbit POST route
 app.post('/addWeatherbitWeather', addWeatherBitData);
-
-// Callback to the route to receive the client data and store it into an object entry
+// Callback to the weatherbit api route
 function addWeatherBitData(request, response) {
     let responseData = request.body;
 
-    weaProjectData.wind = request.body.wind;
-    weaProjectData.clouds = request.body.clouds;
-    weaProjectData.uv = request.body.uv;
-    weaProjectData.date = request.body.date;
+    weatherbitProjectData.wind = request.body.wind;
+    weatherbitProjectData.clouds = request.body.clouds;
+    weatherbitProjectData.uv = request.body.uv;
+    weatherbitProjectData.date = request.body.date;
 
-    response.send(weaProjectData)
-    console.log('weatherbit response', weaProjectData)
+    response.send(weatherbitProjectData)
+    console.log('weatherbit response', weatherbitProjectData)
 }
+
+//************************************************** Weatherbit routes **************************************************/
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function() {

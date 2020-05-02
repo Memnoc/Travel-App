@@ -37,10 +37,15 @@ function calculateTime() {
         let missingDays = countDownDate - today;
         let days = Math.floor(missingDays / (1000 * 60 * 60 * 24));
 
-        document.getElementById("countdown").innerHTML = "is " + days + " days away ";
+
+
+        document.getElementById("countdown").innerHTML = "status: leaving in " + days + " days";
         if (missingDays < 0) {
             clearInterval(intervalTime);
-            document.getElementById("countdown").innerHTML = "Your trip was expired :(";
+            document.getElementById("countdown").innerHTML = "status: expired";
+        } else if (days == 0) {
+            clearInterval(intervalTime);
+            document.getElementById("countdown").innerHTML = " status: leave tomorrow";
         }
     }, 1000);
 }
