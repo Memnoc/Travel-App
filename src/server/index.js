@@ -1,7 +1,10 @@
-/* Empty JS object to act as endpoint for all routes */
+//************************************************** Data **************************************************/ 
 
 const weatherbitProjectData = {};
 const geonamesProjectData = {};
+const restCountriesProjectData = {};
+
+//************************************************** Server components **************************************************/ 
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -72,6 +75,32 @@ function addWeatherBitData(request, response) {
 }
 
 //************************************************** Weatherbit routes **************************************************/
+
+//************************************************** RestCountries routes **************************************************/
+
+// RestCountries GET route
+app.get('/restcountry', cors(), sendRestCountriesData);
+// Callback to the restCountries api route
+function sendRestCountriesData(request, response) {
+    response.send(restCountriesProjectData);
+}
+
+// RestCountries POST route
+app.post('/AddRestcountry', addRestCountriesData);
+// Callback to the restCountries api route
+function addRestCountriesData(request, response) {
+    let responseData = request.body;
+
+    restCountriesProjectData.capital = request.body.capital;
+    restCountriesProjectData.language = request.body.language;
+    restCountriesProjectData.native = request.body.native;
+    restCountriesProjectData.population = request.body.population;
+
+    response.send(restCountriesProjectData)
+    console.log('restcountries response', restCountriesProjectData)
+}
+
+//************************************************** RestCountries routes **************************************************/
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function() {

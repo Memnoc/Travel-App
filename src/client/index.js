@@ -13,11 +13,10 @@ let submitButton = document.getElementById('submitCityButton');
 submitButton.addEventListener('click', async(event) => {
     try {
         event.preventDefault();
-        geonamesApiCall();
 
+        geonamesApiCall();
         weatherBitApiCall();
 
-        // restCountriesApiCall();
     } catch (error) {
         console.log("error", error);
     }

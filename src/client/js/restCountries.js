@@ -1,6 +1,10 @@
 import { postData } from "./postData";
 
 const fetchURL = "http://localhost:8081/restcountry";
+const capital = document.getElementById('capital');
+const language = document.getElementById('languages');
+const native = document.getElementById('native');
+const population = document.getElementById('population');
 
 // https://restcountries.eu/rest/v2/name/italy
 
@@ -12,8 +16,8 @@ function restCountriesApiCall(e) {
     getCountryInfo(baseURL + countryName)
         .then(function(data) {
             try {
-                // postData('http://localhost:8081/AddRestcountry', { wind: data.data[0].wind_spd, clouds: data.data[0].clouds, uv: data.data[0].max_uv, date: data.data[0].datetime })
-                // updateUI();
+                postData('http://localhost:8081/AddRestcountry', { capital: data[0].capital, language: data[0].languages[0].name, native: data[0].nativeName, population: data[0].population })
+                updateUI();
             } catch (error) {
                 console.log("error", error);
             }
@@ -25,7 +29,10 @@ const getCountryInfo = async(baseURL, countryName) => {
     const res = await fetch(baseURL, countryName)
     try {
         const data = await res.json();
-        console.log('data form rest countries', data);
+        console.log('data form rest countries', data[0].capital);
+        console.log('data form rest countries', data[0].languages[0].name);
+        console.log('data form rest countries', data[0].nativeName);
+        console.log('data form rest countries', data[0].population);
         return data;
     } catch (error) {
         console.log("error", error);
@@ -33,20 +40,20 @@ const getCountryInfo = async(baseURL, countryName) => {
 }
 
 
-// const updateUI = async() => {
-//     const request = await fetch(fetchURL);
-//     try {
-//         const allData = await request.json();
-//         console.log("this is weatherbit allData", allData);
-//         today.innerHTML = 'Today is: ' + allData.date;
-//         wind.innerHTML = 'Average wind speed (Default m/s): ' + allData.wind;
-//         clouds.innerHTML = 'Average cloud coverage (%): ' + allData.clouds;
-//         uv.innerHTML = 'Maximum UV Index (0-11+): ' + allData.uv;
+const updateUI = async() => {
+    const request = await fetch(fetchURL);
+    try {
+        const allData = await request.json();
+        console.log("this is restcountries allData", allData);
+        capital.innerHTML = 'Capital: ' + allData.capital;
+        language.innerHTML = 'Language: ' + allData.language;
+        native.innerHTML = 'Native name: ' + allData.native;
+        population.innerHTML = 'Population: ' + allData.population;
 
 
-//     } catch (error) {
-//         console.log("error", error);
-//     }
-// }
+    } catch (error) {
+        console.log("error", error);
+    }
+}
 
 export { restCountriesApiCall }

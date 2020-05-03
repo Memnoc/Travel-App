@@ -1,5 +1,4 @@
 import { postData } from "./postData";
-import { restCountriesApiCall } from "./restCountries"
 
 const APP_ID = '&username=Memnoc';
 let searchMethod = 'name_equals=';
@@ -38,8 +37,6 @@ function calculateTime() {
         let today = new Date().getTime();
         let missingDays = countDownDate - today;
         let days = Math.floor(missingDays / (1000 * 60 * 60 * 24));
-
-
 
         document.getElementById("countdown").innerHTML = "status: leaving in " + days + " days";
         if (missingDays < 0) {
