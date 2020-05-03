@@ -3,6 +3,7 @@
 const weatherbitProjectData = {};
 const geonamesProjectData = {};
 const restCountriesProjectData = {};
+const pixabayImagesProjectData = {};
 
 //************************************************** Server components **************************************************/ 
 
@@ -101,6 +102,29 @@ function addRestCountriesData(request, response) {
 }
 
 //************************************************** RestCountries routes **************************************************/
+
+//************************************************** Pixabay routes **************************************************/
+
+// RestCountries GET route
+app.get('/pixabay', cors(), sendPixabayImagesData);
+// Callback to the restCountries api route
+function sendPixabayImagesData(request, response) {
+    response.send(pixabayImagesProjectData);
+}
+
+// RestCountries POST route
+app.post('/AddPixabayImages', addPixabayImagesData);
+// Callback to the restCountries api route
+function addPixabayImagesData(request, response) {
+    let responseData = request.body;
+
+    pixabayImagesProjectData.image = request.body.image;
+
+    response.send(pixabayImagesProjectData)
+    console.log('restcountries response', pixabayImagesProjectData)
+}
+
+//************************************************** Pixabay routes **************************************************/
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function() {
