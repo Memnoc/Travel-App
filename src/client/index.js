@@ -2,6 +2,7 @@ import { checkForName } from './js/nameChecker'
 import { geonamesApiCall } from './js/geoName'
 import { weatherBitApiCall } from './js/weatherBit'
 import { restCountriesApiCall } from './js/restCountries'
+import { pixabayApiCall } from './js/pixaBay'
 
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -16,6 +17,7 @@ submitButton.addEventListener('click', async(event) => {
 
         geonamesApiCall();
         weatherBitApiCall();
+        pixabayApiCall();
 
     } catch (error) {
         console.log("error", error);
@@ -28,5 +30,6 @@ export {
     checkForName,
     geonamesApiCall,
     weatherBitApiCall,
-    restCountriesApiCall
+    restCountriesApiCall,
+    pixabayApiCall
 }

@@ -29,10 +29,6 @@ const getCountryInfo = async(baseURL, countryName) => {
     const res = await fetch(baseURL, countryName)
     try {
         const data = await res.json();
-        console.log('data form rest countries', data[0].capital);
-        console.log('data form rest countries', data[0].languages[0].name);
-        console.log('data form rest countries', data[0].nativeName);
-        console.log('data form rest countries', data[0].population);
         return data;
     } catch (error) {
         console.log("error", error);
