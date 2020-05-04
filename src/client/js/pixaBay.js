@@ -1,23 +1,21 @@
 import { postData } from "./postData";
 
 const fetchURL = "http://localhost:8081/pixabay";
+const apiKey = '&key=12439814-8b5ec3fe0f64e43b981b64534&';
+const baseURL = 'https://pixabay.com/api/?';
+const search = 'q='
+const imageType = '&image_type=photo';
+let searchTerm;
 
-
-
-
-// const language = document.getElementById('languages');
-// const native = document.getElementById('native');
-// const population = document.getElementById('population');
-
-// https://pixabay.com/api/?key=12439814-8b5ec3fe0f64e43b981b64534&q=rome&image_type=photo
-
+/**
+ * Makes an API call to getPixabayImages() - receives the API response from it
+ * Calls PostData to post the request to the API with the required fields
+ * Calls UpdatedUI() to update the UI with the retrieved data
+ * @param {event parameter} e 
+ */
 function pixabayApiCall(e) {
-    const apiKey = '&key=12439814-8b5ec3fe0f64e43b981b64534&';
-    const baseURL = 'https://pixabay.com/api/?';
-    const search = 'q='
-    const imageType = '&image_type=photo';
-    let searchTerm;
     let newSearch = document.getElementById('submitCity').value;
+
     getPixabayImages(baseURL + apiKey + search + newSearch + imageType)
         .then(function(data) {
             try {
@@ -30,6 +28,14 @@ function pixabayApiCall(e) {
     console.log('first console log', baseURL + apiKey + search + newSearch + imageType);
 };
 
+/**
+ * Fecthes the response data from the API
+ * @param {The base URL for the API request} baseURL 
+ * @param {The API key for the API} apiKey 
+ * @param {Search query parameter} search 
+ * @param {User input} searchTerm 
+ * @param {Image type query parameter} imageType 
+ */
 const getPixabayImages = async(baseURL, apiKey, search, searchTerm, imageType) => {
     const res = await fetch(baseURL, apiKey, search, searchTerm, imageType)
     try {
@@ -43,7 +49,9 @@ const getPixabayImages = async(baseURL, apiKey, search, searchTerm, imageType) =
     }
 }
 
-
+/**
+ * Updates the UI with the data fecthed from the API
+ */
 const updateUI = async() => {
     const request = await fetch(fetchURL);
     try {
