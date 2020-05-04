@@ -78,4 +78,4 @@ GEONAMES API
 
  # License
 
- This repo is open source software [licensed as MIT](https://github.com/Memnoc/Travel_App/blob/master/LICENSE).
+ This repo is open source software [licensed as MIT](https://github.com/Memnoc/Travel-App/blob/master/LICENSE).
