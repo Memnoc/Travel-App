@@ -49,13 +49,13 @@ function calculateTime() {
         let missingDays = countDownDate - today;
         let days = Math.floor(missingDays / (1000 * 60 * 60 * 24));
 
-        document.getElementById("countdown").innerHTML = "status: leaving in " + days + " days";
+        document.getElementById("countdown").innerHTML = "Trip status: leaving in " + days + " days";
         if (missingDays < 0) {
             clearInterval(intervalTime);
-            document.getElementById("countdown").innerHTML = "status: expired";
+            document.getElementById("countdown").innerHTML = "Trip status: expired";
         } else if (days == 0) {
             clearInterval(intervalTime);
-            document.getElementById("countdown").innerHTML = " status: leave tomorrow";
+            document.getElementById("countdown").innerHTML = "Trip status: leave tomorrow";
         }
     }, 1000);
 }

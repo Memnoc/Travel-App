@@ -3,80 +3,102 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Travel Planner</title>
 </head>
 
 <body>
-
+    <nav class="navbar navbar-dark bg-primary">
+        <!-- Navbar content -->
+        <span class="navbar-text">
+                Home
+        </span>
+    </nav>
+    <a href="https://pixabay.com/">
+        <img id="pixabay-image" src="https://pixabay.com/static/img/public/medium_rectangle_a.png" alt="Pixabay">
+    </a>
     <header>
-        <div class="">
-            Logo
-        </div>
-        <div class="">
-            navigation
-        </div>
+        <h1 class="page-title">Travel Planner Info</h1>
     </header>
 
     <main>
+
         <section class="card-section">
             <div class="card shadow-lg p-3 mb-5 bg-dark rounded">
                 <div class="card-body">
                     <form>
-                        <div class="">
-                            <h1>Travel Planner</h1>
+                        <div class="form-row">
+                            <h1>Trip information</h1>
                             <p>Departure date:</p>
                             <input id="depDate" placeholder="dd/mm/yyyy" type="date">
                             <p>Destination:</p>
-                            <input class="card-text" id="submitCity" type="text" name="input" value="" placeholder="Paste the city name" required>
+                            <input class="card-text" id="submitCity" type="text" name="input" value="" placeholder="Enter the city name" required>
                             <h4 id="countryName" class="card-title">
                                 <h5 id="countryValue">
 
                             </h4>
-                            <div>
-                                <span id="countdown"></span>
-                            </div>
 
-                            <br>
-                            <!-- <p id="countdown"></p> -->
-                            <button class="btn btn-primary" id="submitCityButton" type="submit" onclick="this.blur();">Submit</button>
-                            <button class="btn btn-primary" id="requestCountryInfo" type="submit" onclick="Client.restCountriesApiCall(event)">info</button>
+                            <img id="image" class="card-img-top" src="..." alt="...">
+
+                            <div>
+                                <span class="card-title" id="countdown"></span>
+                            </div>
+                            <a href="#" class="float">
+                                <i class="fa fa-plane floating-btn" id="submitCityButton" type="submit" onclick="this.blur();"></i>
+                            </a>
                         </div>
                     </form>
                 </div>
             </div>
             <br>
-            <h3 class="page-title">Weather forecast for departure date: </h3>
-            <!-- List results -->
-            <div class="list-group ">
-                <div class="d-flex w-100 justify-content-center">
-                    <p id="today"></p>
-                    <p id="wind"></p>
-                    <p id="clouds"></p>
-                    <p id="uv"></p>
-                </div>
-                <h3 class="page-title">Country information: </h3>
-                <!-- List results -->
-                <div class="list-group ">
-                    <div class="d-flex w-100 justify-content-center">
-                        <p id="capital"></p>
-                        <p id="languages"></p>
-                        <p id="native"></p>
-                        <p id="population"></p>
-                    </div>
-                    <h3 class="page-title">Country image: </h3>
-                    <!-- List results -->
-                    <div class="list-group ">
-                        <div class="d-flex w-100 justify-content-center">
-                            <img id="image" src="" alt="">
 
+            <div class="card-deck">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weather Forecast</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p id="today"></p>
+                            <p id="wind"></p>
+                            <p id="clouds"></p>
+                            <p id="uv"></p>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Country Information</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p id="capital"></p>
+                            <p id="languages"></p>
+                            <p id="native"></p>
+                            <p id="population"></p>
+                            <button class="btn btn-primary" id="requestCountryInfo" type="submit" onclick="Client.restCountriesApiCall(event)">Country Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>This is a footer</p>
-    </footer>
+    <!-- Footer -->
+    <nav class="footer_navbar navbar navbar-dark bg-primary" id="footer-container">
+        <!-- Copyright -->
+        <div class="navbar-text footer-copyright text-center py-3" id="copyright">© 2020 Copyright:
+            <a href="https://github.com/Memnoc/Travel-App" title="Matteo Genesio Stara" target="_blank" id="name">Matteo Genesio Stara</a>
+            <a href="https://pixabay.com/api/docs/" title="Matteo Genesio Stara" target="_blank">Powered by Pixabay API</a>
+        </div>
+    </nav>
+
     <script>
         // Check that service workers are supported
         if ('serviceWorker' in navigator) {

@@ -1,14 +1,97 @@
+@import "./master";
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 body {
+    overflow-y: scroll;
     display: flex;
+    margin: 0;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
+    padding-bottom: 250px;
+    background-color: $primary-color;
 }
 
 main {
-    flex: 2;
+    flex: 4;
 }
 
 section {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 50px auto;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.card {
+    display: block;
+    width: 100%;
+    background-color: $primary-color-light-bg;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px $primary-color-dark-bg;
+}
+
+h1 {
+    color: $primary-color-dark !important;
+    margin: 0px !important;
+    padding: 10px !important;
+}
+
+p {
+    color: $secondary-text-color;
+}
+
+.page-title {
+    color: $primary-color-light-bg !important;
+    margin-top: 10px !important;
+}
+
+.card-title {
+    color: $primary-text-color;
+    margin-top: 6px;
+}
+
+img {
+    display: block;
+    width: 50%;
+}
+
+form {
+    border: none !important;
+    border-radius: 3px;
+    padding: 40px;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 80px;
+    right: 60px;
+    background-color: $accent-color;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+}
+
+.floating-btn {
+    margin-top: 18px;
+    font-size: 25px;
+}
+
+a {
+    color: white;
+}
+
+#pixabay-image {
+    width: 5% !important;
+    margin: 6px;
 }

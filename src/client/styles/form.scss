@@ -1,12 +1,40 @@
+@import "./master";
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
+    border: 1px solid $divider-color;
+    border-radius: 1px;
     padding: 40px;
 }
 
 input {
-    padding: 5px 20px;
-    width: 100%;
+    width: 30%;
     line-height: 16px;
     margin: 10px 0;
+    outline-color: $accent-color !important;
+    border-radius: 8px;
+    color: $secondary-text-color !important;
+    padding-left: 8px;
+}
+
+.btn {
+    display: flex !important;
+    margin: 0 auto;
+    float: none;
+    &.btn-primary {
+        justify-content: center;
+        background-color: $accent-color !important;
+        background-image: none;
+        border-color: $accent-color !important;
+        box-shadow: none;
+        text-shadow: none;
+        border-radius: 2px;
+        background-repeat: no-repeat;
+        margin-top: 25px;
+        width: 30%;
+        height: 30%;
+        padding-top: 6px;
+        &.btn-primary:hover {
+            background-color: $accent-color !important;
+            border: 1px solid $accent-color !important;
+        }
+    }
 }

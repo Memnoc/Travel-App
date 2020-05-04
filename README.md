@@ -27,3 +27,42 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 - ```npm install```
 - ```npm start``` to start the app
 - this app runs on localhost:8080, but you can of course edit that in server.js
+
+## What is this tool?
+
+> This tool allows you to extract sentiment, classification and entity data from any given article or text (e.g. comments, tweets, documents, articles, etc.).
+> The tool is powered by a third party API called Alyen API (check the credit section for more info).
+
+![alt text](https://i.imgur.com/tWGaZUF.png)
+
+## How do I install it?
+
+1. Clone this repo
+
+2. cd into your local cloned repo:
+
+`npm install or yarn install`
+
+3. Create a new .env file and containing the following environment variables for the Aylien API:
+
+`API_ID`
+`API_KEY`
+
+4. Run: `npm run dev or yarn run dev`
+
+5. Open another terminal and run:
+
+`npm start or yarn start to start your nodejs server`
+
+# Credits
+
+GEONAMES API
+
+ - The [GEONAMES API](http://www.geonames.org/export/web-services.html) free weather API service.
+ - The [WEATHERBIT API](https://www.weatherbit.io/api) free weather API service.
+ - The [RESTCOUNTRIES](https://restcountries.eu/) free geo-location API service.
+ - The [PIXABAY API](https://pixabay.com/api/docs/) free images API service.
+
+ # License
+
+ This repo is open source software [licensed as MIT](https://github.com/Memnoc/Travel_App/blob/master/LICENSE).
