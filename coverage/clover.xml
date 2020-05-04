@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1588587528980" clover="3.2.0">
+  <project timestamp="1588587528980" name="All files">
+    <metrics statements="55" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0" elements="63" coveredelements="25" complexity="0" loc="55" ncloc="55" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="/Users/mgeneisostara/Desktop/Travel App/src/server/index.js">
+      <metrics statements="55" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="48" count="0" type="stmt"/>
+      <line num="49" count="0" type="stmt"/>
+      <line num="50" count="0" type="stmt"/>
+      <line num="52" count="0" type="stmt"/>
+      <line num="53" count="0" type="stmt"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="64" count="0" type="stmt"/>
+      <line num="68" count="1" type="stmt"/>
+      <line num="71" count="0" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
+      <line num="74" count="0" type="stmt"/>
+      <line num="75" count="0" type="stmt"/>
+      <line num="76" count="0" type="stmt"/>
+      <line num="78" count="0" type="stmt"/>
+      <line num="79" count="0" type="stmt"/>
+      <line num="87" count="1" type="stmt"/>
+      <line num="90" count="0" type="stmt"/>
+      <line num="94" count="1" type="stmt"/>
+      <line num="97" count="0" type="stmt"/>
+      <line num="99" count="0" type="stmt"/>
+      <line num="100" count="0" type="stmt"/>
+      <line num="101" count="0" type="stmt"/>
+      <line num="102" count="0" type="stmt"/>
+      <line num="104" count="0" type="stmt"/>
+      <line num="105" count="0" type="stmt"/>
+      <line num="113" count="1" type="stmt"/>
+      <line num="116" count="0" type="stmt"/>
+      <line num="120" count="1" type="stmt"/>
+      <line num="123" count="0" type="stmt"/>
+      <line num="125" count="0" type="stmt"/>
+      <line num="127" count="0" type="stmt"/>
+      <line num="128" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

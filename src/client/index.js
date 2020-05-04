@@ -1,4 +1,3 @@
-import { checkForName } from './js/nameChecker'
 import { geonamesApiCall } from './js/geoName'
 import { weatherBitApiCall } from './js/weatherBit'
 import { restCountriesApiCall } from './js/restCountries'
@@ -27,7 +26,6 @@ submitButton.addEventListener('click', async(event) => {
 
 
 export {
-    checkForName,
     geonamesApiCall,
     weatherBitApiCall,
     restCountriesApiCall,

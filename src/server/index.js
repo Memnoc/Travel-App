@@ -24,6 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+
+
+
+
 //************************************************** Geonames routes **************************************************/ 
 
 // GET geonames api route
@@ -121,7 +125,7 @@ function addPixabayImagesData(request, response) {
     pixabayImagesProjectData.image = request.body.image;
 
     response.send(pixabayImagesProjectData)
-    console.log('restcountries response', pixabayImagesProjectData)
+    console.log('pixabay response', pixabayImagesProjectData)
 }
 
 //************************************************** Pixabay routes **************************************************/

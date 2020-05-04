@@ -54,6 +54,7 @@ const getWeather = async(baseURL, searchMethod, searchTerm, APP_ID) => {
     const res = await fetch(baseURL + searchMethod + searchTerm + APP_ID)
     try {
         const data = await res.json();
+        console.log('whole data geonames', data);
         return data;
     } catch (error) {
         console.log("error", error);
