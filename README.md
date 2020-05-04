@@ -33,8 +33,9 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 > This tool allows you to extract sentiment, classification and entity data from any given article or text (e.g. comments, tweets, documents, articles, etc.).
 > The tool is powered by a third party API called Alyen API (check the credit section for more info).
 
-![alt text](https://i.imgur.com/tWGaZUF.png)
 ![alt text](https://i.imgur.com/siTK5Fi.png)
+![alt text](https://i.imgur.com/tWGaZUF.png)
+
 
 ## How do I install it?
 
