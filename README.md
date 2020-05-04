@@ -34,6 +34,7 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 > The tool is powered by a third party API called Alyen API (check the credit section for more info).
 
 ![alt text](https://i.imgur.com/tWGaZUF.png)
+![alt text](https://i.imgur.com/siTK5Fi.png)
 
 ## How do I install it?
 
@@ -53,6 +54,17 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 5. Open another terminal and run:
 
 `npm start or yarn start to start your nodejs server`
+
+## How do I use it?
+
+1. Enter the date of tomorrow (MUST BE the next day date because of ASPI limitations)
+
+2. Enter a location (i.e. city name)
+
+3. Click the floating button (bottom-right corner):
+
+4. Additionally, click on Country Info button for information about the country
+
 
 # Credits
 
