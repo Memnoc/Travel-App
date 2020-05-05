@@ -7,7 +7,7 @@ const clouds = document.getElementById('clouds');
 const uv = document.getElementById('uv');
 
 const baseURL = 'https://api.weatherbit.io/v2.0/history/daily?';
-const apiKey = "&key=7e120a3934954a01a4027b3c8aaf8c0d";
+const apiKey = "&key={your_key}";
 const searchMethod = 'city=';
 const startingDate = '&start_date=';
 const endingDate = '&end_date=';

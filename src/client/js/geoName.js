@@ -1,6 +1,6 @@
 import { postData } from "./postData";
 
-const apiKey = '&username=Memnoc';
+const apiKey = '&username={username}';
 let searchMethod = 'name_equals=';
 let searchTerm;
 let baseURL = 'http://api.geonames.org/searchJSON?';

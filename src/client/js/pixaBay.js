@@ -1,7 +1,7 @@
 import { postData } from "./postData";
 
 const fetchURL = "http://localhost:8081/pixabay";
-const apiKey = '&key=12439814-8b5ec3fe0f64e43b981b64534&';
+const apiKey = '&key={your_key}&';
 const baseURL = 'https://pixabay.com/api/?';
 const search = 'q='
 const imageType = '&image_type=photo';
